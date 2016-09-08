@@ -15,6 +15,7 @@
 		4C2489F01D81E6BD0014DDB3 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2489EF1D81E6BD0014DDB3 /* RecipeViewController.swift */; };
 		4C2489F21D81E7860014DDB3 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2489F11D81E7860014DDB3 /* RecipeCell.swift */; };
 		4C2489F41D81ED3D0014DDB3 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2489F31D81ED3D0014DDB3 /* Recipe.swift */; };
+		4C2489F61D8200550014DDB3 /* RecipeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2489F51D8200550014DDB3 /* RecipeTest.swift */; };
 		5FE5D372D37B532ADDBD3FD3 /* Pods_SwiftyInterviewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69B3C93C975DF02648DBF759 /* Pods_SwiftyInterviewTests.framework */; };
 		63AB7A881B322692B716A61E /* Pods_SwiftyInterviewUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B14911538B9067528F3F6A4F /* Pods_SwiftyInterviewUITests.framework */; };
 		69AC41E78F4E974F4AC3DE57 /* Pods_SwiftyInterview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAE3626B39C42DE07979490 /* Pods_SwiftyInterview.framework */; };
@@ -55,6 +56,7 @@
 		4C2489EF1D81E6BD0014DDB3 /* RecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		4C2489F11D81E7860014DDB3 /* RecipeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 		4C2489F31D81ED3D0014DDB3 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		4C2489F51D8200550014DDB3 /* RecipeTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeTest.swift; sourceTree = "<group>"; };
 		69B3C93C975DF02648DBF759 /* Pods_SwiftyInterviewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyInterviewTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CD59CD31D6A077A55ECB72F /* Pods-SwiftyInterview.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyInterview.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftyInterview/Pods-SwiftyInterview.debug.xcconfig"; sourceTree = "<group>"; };
 		995019A7B96AE57BB683BDF8 /* Pods-SwiftyInterviewUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyInterviewUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftyInterviewUITests/Pods-SwiftyInterviewUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			children = (
 				4C2489CD1D81D5D30014DDB3 /* SwiftyInterviewTests.swift */,
 				4C2489CF1D81D5D30014DDB3 /* Info.plist */,
+				4C2489F51D8200550014DDB3 /* RecipeTest.swift */,
 			);
 			path = SwiftyInterviewTests;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C2489CE1D81D5D30014DDB3 /* SwiftyInterviewTests.swift in Sources */,
+				4C2489F61D8200550014DDB3 /* RecipeTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
