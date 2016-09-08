@@ -1,0 +1,28 @@
+platform :ios, ‘9.0’
+
+use_frameworks!
+
+def shared_pods
+    pod ‘Alamofire’
+    pod ‘Kingfisher’
+    pod 'SnapKit'
+end
+
+def testing_pods
+	pod 'Quick', '~> 0.9.0'
+	pod 'Nimble', '~> 4.1.0'
+end
+
+target ‘SwiftyInterview’ do
+    shared_pods
+end
+
+target 'SwiftyInterviewTests’ do
+    shared_pods
+    testing_pods
+end
+
+target 'SwiftyInterviewUITests’ do
+    shared_pods
+    testing_pods
+end
