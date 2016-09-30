@@ -16,23 +16,23 @@ struct Recipe {
 }
 
 struct RecipeViewModel {
-    let imageURL:NSURL!
+    let imageURL:URL!
     let name:NSAttributedString!
     let description:NSAttributedString!
     
     init(with model:Recipe){
-        imageURL = NSURL(string: model.imageURL)
+        imageURL = URL(string: model.imageURL)
         
         let contentAttributes = [
-            NSFontAttributeName: UIFont.boldSystemFontOfSize(20.0),
-            NSForegroundColorAttributeName:UIColor.blueColor()
+            NSFontAttributeName: UIFont.boldSystemFont(ofSize: 20.0),
+            NSForegroundColorAttributeName:UIColor.blue
         ]
         
         name = NSMutableAttributedString(string: model.name, attributes: contentAttributes)
         
         let descriptionAttributes = [
-            NSFontAttributeName: UIFont.boldSystemFontOfSize(10.0),
-            NSForegroundColorAttributeName:UIColor.lightGrayColor()
+            NSFontAttributeName: UIFont.boldSystemFont(ofSize: 10.0),
+            NSForegroundColorAttributeName:UIColor.lightGray
         ]
         
         description = NSMutableAttributedString(string: model.description, attributes: descriptionAttributes)

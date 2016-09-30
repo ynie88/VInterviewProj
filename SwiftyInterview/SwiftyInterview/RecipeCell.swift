@@ -13,26 +13,26 @@ import Kingfisher
 class RecipeCell:UITableViewCell {
     static let reuseID = "RecipeCellReuseID"
     
-    private lazy var imageContainer:UIView = {
+    fileprivate lazy var imageContainer:UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor.clearColor()
+        view.backgroundColor = UIColor.clear
         self.contentView.addSubview(view)
         return view
     }()
     
-    private lazy var leadImage:UIImageView = {
+    fileprivate lazy var leadImage:UIImageView = {
         let imageView = UIImageView()
         self.imageContainer.addSubview(imageView)
         return imageView
     }()
     
-    private lazy var primaryLabel:UILabel = {
+    fileprivate lazy var primaryLabel:UILabel = {
         let label = UILabel()
         self.contentView.addSubview(label)
         return label
     }()
     
-    private lazy var secondaryLabel:UILabel = {
+    fileprivate lazy var secondaryLabel:UILabel = {
         let label = UILabel()
         self.contentView.addSubview(label)
         return label
@@ -42,35 +42,33 @@ class RecipeCell:UITableViewCell {
         let viewModel = RecipeViewModel(with: model)
         primaryLabel.attributedText = viewModel.name
         secondaryLabel.attributedText = viewModel.description
-        
-        leadImage.kf_setImageWithURL(viewModel.imageURL)
+        leadImage.kf.setImage(with: viewModel.imageURL)
         
         setNeedsUpdateConstraints()
         updateConstraintsIfNeeded()
     }
     
     override func updateConstraints() {
-        self.contentView
-        imageContainer.snp_updateConstraints { (make) in
+        imageContainer.snp.updateConstraints { (make) in
             make.left.equalTo(self.contentView).offset(10)
             make.centerY.equalTo(self.contentView)
             make.width.equalTo(80)
-            make.height.equalTo(imageContainer.snp_width)
+            make.height.equalTo(imageContainer.snp.width)
         }
         
-        leadImage.snp_updateConstraints { (make) in
+        leadImage.snp.updateConstraints { (make) in
             make.leading.trailing.top.bottom.equalTo(imageContainer)
         }
         
-        primaryLabel.snp_updateConstraints { (make) in
+        primaryLabel.snp.updateConstraints { (make) in
             make.top.equalTo(self.contentView).offset(50)
             make.trailing.equalTo(self.contentView).offset(10)
-            make.leading.equalTo(self.imageContainer.snp_trailing).offset(10)
+            make.leading.equalTo(self.imageContainer.snp.trailing).offset(10)
         }
         
-        secondaryLabel.snp_updateConstraints { (make) in
+        secondaryLabel.snp.updateConstraints { (make) in
             make.leading.trailing.equalTo(primaryLabel)
-            make.top.equalTo(primaryLabel.snp_bottom).offset(5).priority(999)
+            make.top.equalTo(primaryLabel.snp.bottom).offset(5).priority(999)
             make.bottom.equalTo(self.contentView).inset(50)
         }
         

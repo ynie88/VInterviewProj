@@ -27,9 +27,9 @@ class RecipeViewController:UITableViewController, RecipeViewControllerInput {
     }
     
     func configureTableview() {
-        tableView.registerClass(RecipeCell.self, forCellReuseIdentifier: RecipeCell.reuseID)
-        tableView.separatorColor = .clearColor()
-        tableView.separatorInset = UIEdgeInsetsZero
+        tableView.register(RecipeCell.self, forCellReuseIdentifier: RecipeCell.reuseID)
+        tableView.separatorColor = UIColor.clear
+        tableView.separatorInset = UIEdgeInsets.zero
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 200
     }
@@ -38,20 +38,20 @@ class RecipeViewController:UITableViewController, RecipeViewControllerInput {
 }
 
 extension RecipeViewController {
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return recipes.count
     }
 }
 
 extension RecipeViewController {
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(RecipeCell.reuseID, forIndexPath: indexPath) as! RecipeCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: RecipeCell.reuseID, for: indexPath) as! RecipeCell
         
-        let recipe = recipes[indexPath.row]
+        let recipe = recipes[(indexPath as NSIndexPath).row]
         cell.configure(with:recipe)
         
         return cell
