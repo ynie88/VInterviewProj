@@ -42,8 +42,14 @@ class RecipeCell:UITableViewCell {
         let viewModel = RecipeViewModel(with: model)
         primaryLabel.attributedText = viewModel.name
         secondaryLabel.attributedText = viewModel.description
-        leadImage.kf.setImage(with: viewModel.imageURL)
-        
+        KingfisherManager.shared.retrieveImage(with: viewModel.imageURL, options: nil, progressBlock: nil) { [weak self] (image, error, cacheType, url) in
+            if let error = error {
+                print("image could not be loaded: \(error)")
+                return
+            }
+            guard let weakSelf = self else {fatalError("self is nil")}
+            weakSelf.leadImage.image = image
+        }
         setNeedsUpdateConstraints()
         updateConstraintsIfNeeded()
     }
