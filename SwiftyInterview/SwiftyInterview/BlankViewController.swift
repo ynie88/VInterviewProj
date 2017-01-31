@@ -1,43 +1,32 @@
 //
-//  RecipeViewController.swift
+//  BlankViewController.swift
 //  SwiftyInterview
 //
-//  Created by Yuchen Nie on 9/8/16.
-//  Copyright © 2016 Yuchen Nie. All rights reserved.
+//  Created by Yuchen Nie on 1/31/17.
+//  Copyright © 2017 Yuchen Nie. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-protocol RecipeViewControllerInput {
-}
-
-protocol RecipeViewControllerOutput {
-}
-
-class RecipeViewController:UITableViewController, RecipeViewControllerInput {
-    var output:RecipeViewControllerOutput?
+class BlankViewController:UITableViewController {
     var recipes = [Recipe]()
     
-    
     override func viewDidLoad() {
-        super.viewDidLoad()
         configureTableview()
         loadCannedData()
+        tableView.allowsSelection = false
     }
-    
     func configureTableview() {
-        tableView.register(RecipeCell.self, forCellReuseIdentifier: RecipeCell.reuseID)
+        tableView.register(BlankCell.self, forCellReuseIdentifier: BlankCell.reuseID)
         tableView.separatorColor = UIColor.clear
         tableView.separatorInset = UIEdgeInsets.zero
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 200
     }
-    
-    
 }
 
-extension RecipeViewController {
+extension BlankViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -47,22 +36,21 @@ extension RecipeViewController {
     }
 }
 
-extension RecipeViewController {
+extension BlankViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: RecipeCell.reuseID, for: indexPath) as! RecipeCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: BlankCell.reuseID, for: indexPath) as! BlankCell
         
         let recipe = recipes[(indexPath as NSIndexPath).row]
-        cell.configure(with:recipe)
-        
+        cell.configure(with: recipe)
         return cell
     }
 }
 
-extension RecipeViewController {
+extension BlankViewController {
     func loadCannedData() {
         let model1 = Recipe(imageURL: imageUrl, name: "Swift", description: Constants.LongText)
         let model2 = Recipe(imageURL: imageUrl, name: "Objective-C", description: Constants.MediumText)
-        let model3 = Recipe(imageURL: imageUrl, name: "Java", description: "What Everyone uses")
+        let model3 = Recipe(imageURL: imageUrl, name: "Java", description: Constants.ShortText)
         let model4 = Recipe(imageURL: imageUrl, name: "Javascript", description: "A New Library every 15 seconds")
         
         recipes.append(model1)

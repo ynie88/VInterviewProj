@@ -34,6 +34,7 @@ class RecipeCell:UITableViewCell {
     
     fileprivate lazy var secondaryLabel:UILabel = {
         let label = UILabel()
+        label.numberOfLines = 0
         self.contentView.addSubview(label)
         return label
     }()
@@ -73,7 +74,8 @@ class RecipeCell:UITableViewCell {
         }
         
         secondaryLabel.snp.updateConstraints { (make) in
-            make.leading.trailing.equalTo(primaryLabel)
+            make.leading.equalTo(primaryLabel)
+            make.trailing.equalTo(self.contentView).inset(15)
             make.top.equalTo(primaryLabel.snp.bottom).offset(5).priority(999)
             make.bottom.equalTo(self.contentView).inset(50)
         }

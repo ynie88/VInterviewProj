@@ -18,6 +18,8 @@
 		4C2489F61D8200550014DDB3 /* RecipeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2489F51D8200550014DDB3 /* RecipeTest.swift */; };
 		4C6E18541D9EB7FE00102673 /* FrameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6E18531D9EB7FE00102673 /* FrameViewController.swift */; };
 		4C6E18561D9EB80800102673 /* FrameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6E18551D9EB80800102673 /* FrameCell.swift */; };
+		4CE359DD1E412BD100766C90 /* BlankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE359DC1E412BD100766C90 /* BlankViewController.swift */; };
+		4CE359E01E412BEE00766C90 /* BlankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE359DF1E412BEE00766C90 /* BlankCell.swift */; };
 		5FE5D372D37B532ADDBD3FD3 /* Pods_SwiftyInterviewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69B3C93C975DF02648DBF759 /* Pods_SwiftyInterviewTests.framework */; };
 		63AB7A881B322692B716A61E /* Pods_SwiftyInterviewUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B14911538B9067528F3F6A4F /* Pods_SwiftyInterviewUITests.framework */; };
 		69AC41E78F4E974F4AC3DE57 /* Pods_SwiftyInterview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAE3626B39C42DE07979490 /* Pods_SwiftyInterview.framework */; };
@@ -61,6 +63,8 @@
 		4C2489F51D8200550014DDB3 /* RecipeTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeTest.swift; sourceTree = "<group>"; };
 		4C6E18531D9EB7FE00102673 /* FrameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameViewController.swift; sourceTree = "<group>"; };
 		4C6E18551D9EB80800102673 /* FrameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameCell.swift; sourceTree = "<group>"; };
+		4CE359DC1E412BD100766C90 /* BlankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlankViewController.swift; sourceTree = "<group>"; };
+		4CE359DF1E412BEE00766C90 /* BlankCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlankCell.swift; sourceTree = "<group>"; };
 		69B3C93C975DF02648DBF759 /* Pods_SwiftyInterviewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyInterviewTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CD59CD31D6A077A55ECB72F /* Pods-SwiftyInterview.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyInterview.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftyInterview/Pods-SwiftyInterview.debug.xcconfig"; sourceTree = "<group>"; };
 		995019A7B96AE57BB683BDF8 /* Pods-SwiftyInterviewUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyInterviewUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftyInterviewUITests/Pods-SwiftyInterviewUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +126,8 @@
 		4C2489B71D81D5D30014DDB3 /* SwiftyInterview */ = {
 			isa = PBXGroup;
 			children = (
+				4C2489F31D81ED3D0014DDB3 /* Recipe.swift */,
+				4CE359DE1E412BD600766C90 /* BlankViewController */,
 				4C6E18521D9EB7EE00102673 /* FrameViewController */,
 				4C2489E61D81E2E80014DDB3 /* ViewController */,
 				4C2489B81D81D5D30014DDB3 /* AppDelegate.swift */,
@@ -188,7 +194,6 @@
 		4C2489EC1D81E5440014DDB3 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				4C2489F31D81ED3D0014DDB3 /* Recipe.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -200,6 +205,15 @@
 				4C6E18551D9EB80800102673 /* FrameCell.swift */,
 			);
 			name = FrameViewController;
+			sourceTree = "<group>";
+		};
+		4CE359DE1E412BD600766C90 /* BlankViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4CE359DC1E412BD100766C90 /* BlankViewController.swift */,
+				4CE359DF1E412BEE00766C90 /* BlankCell.swift */,
+			);
+			name = BlankViewController;
 			sourceTree = "<group>";
 		};
 		52D14EB1EB743D65DF3DB95C /* Pods */ = {
@@ -297,7 +311,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Yuchen Nie";
 				TargetAttributes = {
 					4C2489B41D81D5D30014DDB3 = {
@@ -507,7 +521,9 @@
 			files = (
 				4C2489F21D81E7860014DDB3 /* RecipeCell.swift in Sources */,
 				4C6E18561D9EB80800102673 /* FrameCell.swift in Sources */,
+				4CE359E01E412BEE00766C90 /* BlankCell.swift in Sources */,
 				4C6E18541D9EB7FE00102673 /* FrameViewController.swift in Sources */,
+				4CE359DD1E412BD100766C90 /* BlankViewController.swift in Sources */,
 				4C2489F01D81E6BD0014DDB3 /* RecipeViewController.swift in Sources */,
 				4C2489B91D81D5D30014DDB3 /* AppDelegate.swift in Sources */,
 				4C2489F41D81ED3D0014DDB3 /* Recipe.swift in Sources */,

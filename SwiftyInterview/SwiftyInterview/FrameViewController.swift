@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+let imageUrl = "http://lorempixel.com/400/400/"
+
 class FrameViewController:UITableViewController {
     var recipes = [Recipe]()
     
@@ -49,10 +51,10 @@ extension FrameViewController {
 
 extension FrameViewController {
     func loadCannedData() {
-        let model1 = Recipe(imageURL: "http://loremflickr.com/400/400?random=4", name: "Swift", description: "A New Language from Apple")
-        let model2 = Recipe(imageURL: "http://loremflickr.com/400/400?random=4", name: "Objective-C", description: "The Original from Apple")
-        let model3 = Recipe(imageURL: "http://loremflickr.com/400/400?random=4", name: "Java", description: "What Everyone uses")
-        let model4 = Recipe(imageURL: "http://loremflickr.com/400/400?random=4", name: "Javascript", description: "A New Library every 15 seconds")
+        let model1 = Recipe(imageURL: imageUrl, name: "Swift", description: Constants.LongText)
+        let model2 = Recipe(imageURL: imageUrl, name: "Objective-C", description: Constants.MediumText)
+        let model3 = Recipe(imageURL: imageUrl, name: "Java", description: Constants.ShortText)
+        let model4 = Recipe(imageURL: imageUrl, name: "Javascript", description: "A New Library every 15 seconds")
         
         recipes.append(model1)
         recipes.append(model2)
@@ -60,4 +62,10 @@ extension FrameViewController {
         recipes.append(model4)
         
     }
+}
+
+struct Constants{
+    static let LongText = "Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text Long Text"
+    static let ShortText = "Short Text"
+    static let MediumText = "Medium Text Medium Text Medium Text Medium Text Medium Text Medium Text Medium Text Medium Text Medium Text Medium Text Medium Text Medium Text Medium Text Medium Text Medium"
 }
