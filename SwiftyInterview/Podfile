@@ -6,6 +6,7 @@ def shared_pods
     pod 'Alamofire'
     pod 'Kingfisher'
     pod 'SnapKit'
+    pod 'AWSS3', '2.5.0'
 end
 
 def testing_pods

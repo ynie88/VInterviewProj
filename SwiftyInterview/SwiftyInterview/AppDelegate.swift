@@ -16,10 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         //let initalViewController = FrameViewController()
+        //let initalViewController = BlankViewController()
         
-        let initalViewController = BlankViewController()
+        let initalViewController = RecipeViewController()
+        let navigation = UINavigationController(rootViewController: initalViewController)
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = initalViewController
+        self.window?.rootViewController = navigation
         self.window?.makeKeyAndVisible()
         // Override point for customization after application launch.
         return true

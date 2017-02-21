@@ -1,24 +1,30 @@
 PODS:
-  - Alamofire (4.0.1)
-  - Kingfisher (3.1.1)
+  - Alamofire (4.3.0)
+  - AWSCore (2.5.0)
+  - AWSS3 (2.5.0):
+    - AWSCore (= 2.5.0)
+  - Kingfisher (3.5.0)
   - Nimble (4.1.0)
   - Quick (0.9.3)
-  - SnapKit (3.0.1)
+  - SnapKit (3.2.0)
 
 DEPENDENCIES:
   - Alamofire
+  - AWSS3 (= 2.5.0)
   - Kingfisher
   - Nimble (~> 4.1.0)
   - Quick (~> 0.9.0)
   - SnapKit
 
 SPEC CHECKSUMS:
-  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
-  Kingfisher: 12b755ae697cc9f0fd3e550db8417fa1233e09ab
+  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  AWSCore: e9839d27ceaa2db75934a9c418630ce63c23e347
+  AWSS3: 3678dd99006ff77c825fb857fc7cbaca0db848c6
+  Kingfisher: 7c62087039d93d26c54c8dd9b0b588d2ce55cef6
   Nimble: 97a0a4cae5124c117115634b2d055d8c97d0af19
   Quick: 13a2a2b19a5d8e3ed4fd0c36ee46597fd77ebf71
-  SnapKit: f818b8326d45b4e1c777d0ab27b5c0a3624bfdeb
+  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
 
-PODFILE CHECKSUM: 54b17389fb0eef040ca55cde0f7e53d80cc25118
+PODFILE CHECKSUM: 0fb61058d77011163dc3352d83200174883d4408
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.0

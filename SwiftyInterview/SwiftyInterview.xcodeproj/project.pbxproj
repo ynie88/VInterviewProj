@@ -18,6 +18,8 @@
 		4C2489F61D8200550014DDB3 /* RecipeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2489F51D8200550014DDB3 /* RecipeTest.swift */; };
 		4C6E18541D9EB7FE00102673 /* FrameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6E18531D9EB7FE00102673 /* FrameViewController.swift */; };
 		4C6E18561D9EB80800102673 /* FrameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6E18551D9EB80800102673 /* FrameCell.swift */; };
+		4CD4B4A31E4A206300EDC7E8 /* S3Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4B4A21E4A206300EDC7E8 /* S3Helper.swift */; };
+		4CD4B4A51E4A297C00EDC7E8 /* ExtendedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4B4A41E4A297C00EDC7E8 /* ExtendedViewController.swift */; };
 		4CE359DD1E412BD100766C90 /* BlankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE359DC1E412BD100766C90 /* BlankViewController.swift */; };
 		4CE359E01E412BEE00766C90 /* BlankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE359DF1E412BEE00766C90 /* BlankCell.swift */; };
 		5FE5D372D37B532ADDBD3FD3 /* Pods_SwiftyInterviewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69B3C93C975DF02648DBF759 /* Pods_SwiftyInterviewTests.framework */; };
@@ -63,6 +65,8 @@
 		4C2489F51D8200550014DDB3 /* RecipeTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeTest.swift; sourceTree = "<group>"; };
 		4C6E18531D9EB7FE00102673 /* FrameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameViewController.swift; sourceTree = "<group>"; };
 		4C6E18551D9EB80800102673 /* FrameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameCell.swift; sourceTree = "<group>"; };
+		4CD4B4A21E4A206300EDC7E8 /* S3Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S3Helper.swift; sourceTree = "<group>"; };
+		4CD4B4A41E4A297C00EDC7E8 /* ExtendedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendedViewController.swift; sourceTree = "<group>"; };
 		4CE359DC1E412BD100766C90 /* BlankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlankViewController.swift; sourceTree = "<group>"; };
 		4CE359DF1E412BEE00766C90 /* BlankCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlankCell.swift; sourceTree = "<group>"; };
 		69B3C93C975DF02648DBF759 /* Pods_SwiftyInterviewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyInterviewTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,6 +164,7 @@
 		4C2489E61D81E2E80014DDB3 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				4CD4B4A21E4A206300EDC7E8 /* S3Helper.swift */,
 				4C2489EC1D81E5440014DDB3 /* ViewModels */,
 				4C2489EB1D81E5340014DDB3 /* Views */,
 				4C2489EA1D81E52F0014DDB3 /* ViewController */,
@@ -179,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				4C2489EF1D81E6BD0014DDB3 /* RecipeViewController.swift */,
+				4CD4B4A41E4A297C00EDC7E8 /* ExtendedViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -316,7 +322,9 @@
 				TargetAttributes = {
 					4C2489B41D81D5D30014DDB3 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 39G7526YCT;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 					};
 					4C2489C81D81D5D30014DDB3 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -520,10 +528,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C2489F21D81E7860014DDB3 /* RecipeCell.swift in Sources */,
+				4CD4B4A51E4A297C00EDC7E8 /* ExtendedViewController.swift in Sources */,
 				4C6E18561D9EB80800102673 /* FrameCell.swift in Sources */,
 				4CE359E01E412BEE00766C90 /* BlankCell.swift in Sources */,
 				4C6E18541D9EB7FE00102673 /* FrameViewController.swift in Sources */,
 				4CE359DD1E412BD100766C90 /* BlankViewController.swift in Sources */,
+				4CD4B4A31E4A206300EDC7E8 /* S3Helper.swift in Sources */,
 				4C2489F01D81E6BD0014DDB3 /* RecipeViewController.swift in Sources */,
 				4C2489B91D81D5D30014DDB3 /* AppDelegate.swift in Sources */,
 				4C2489F41D81ED3D0014DDB3 /* Recipe.swift in Sources */,
@@ -613,7 +623,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -655,7 +665,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -670,9 +680,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 39G7526YCT;
 				INFOPLIST_FILE = SwiftyInterview/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Fair.Midlend.SwiftyInterview;
+				PRODUCT_BUNDLE_IDENTIFIER = Fair.Midlend.SwiftyInterview.ThaBomb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -684,9 +696,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 39G7526YCT;
 				INFOPLIST_FILE = SwiftyInterview/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Fair.Midlend.SwiftyInterview;
+				PRODUCT_BUNDLE_IDENTIFIER = Fair.Midlend.SwiftyInterview.ThaBomb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
