@@ -146,7 +146,11 @@ class S3Helper {
         
 
         uploadRequest?.body = filePath
-        uploadRequest?.key = path.lastPathComponent
+        
+        let key1 = path.lastPathComponent
+        let key = key1.replacingOccurrences(of: ".", with: "")
+        
+        uploadRequest?.key = key
         uploadRequest?.bucket = S3BucketName
         uploadRequest?.contentLength = contentLength
         return uploadRequest
